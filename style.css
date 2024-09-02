@@ -8,3 +8,83 @@
 body{
     font-family: Montserrat;
 }
+nav{
+    display: flex;
+    background-color: #1C2833;
+    height: 80px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 50px 0 80px;
+    align-items: center;
+}
+.logo{
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    list-style-type: none;
+    padding: 0 10px 0 0;
+
+}
+.menu li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 14px 50px;
+    border-radius: 8px;
+    transition-duration: 0.5s;
+}
+.menu a:hover ,.menu .activbe-home{
+    background-color: #566573;
+}
+.menu-btn{
+    color: rgb(192, 192, 192);
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+#click{
+    display: none;
+}
+
+/* Responsive work start hare */
+
+@media only screen and (max-width:1292px) {
+    .menu-btn{
+        display: block
+    }
+    .menu{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background-color: #232f3a;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 20px;
+        transition: 1s;
+    }
+    #click:checked ~ .menu-btn i::before{
+        content: "";
+    }
+    #click:checked ~ ul{
+        left: 0%;
+    }
+    .menu li{
+        margin: 50px 0;
+    }
+    .menu li a{
+        font-size: 22px;
+    }
+    .menu li a:hover, .menu li a.activbe-home{
+        background:none;
+        color: red;
+    }
+    
+}
