@@ -10,81 +10,76 @@ body{
 }
 nav{
     display: flex;
-    background-color: #1C2833;
-    height: 80px;
-    width: 100%;
     justify-content: space-between;
-    padding: 0 50px 0 80px;
+    background-color: rgb(60, 60, 60);
+    height: 80px;
+    padding: 0 50px 0px 80px;
     align-items: center;
 }
 .logo{
-    font-size: 25px;
+    font-size: 35px;
     font-weight: bold;
     color: white;
 }
-.menu{
+input{
+    display: none;
+}
+label{
+    display: none;
+}
+ul{
     display: flex;
 }
-.menu li{
+ul li{
     list-style-type: none;
-    padding: 0 10px 0 0;
-
+    margin: 0 10px;
 }
-.menu li a{
+ul li a{
     text-decoration: none;
-    color: white;
+    padding: 15px 50px ;
     font-size: 18px;
+    color: white;
     font-weight: bold;
-    padding: 14px 50px;
+    transition: 0.5s;
+}
+.menu a:hover , .active-home{
+    background-color: brown;
     border-radius: 8px;
-    transition-duration: 0.5s;
 }
-.menu a:hover ,.menu .activbe-home{
-    background-color: #566573;
-}
-.menu-btn{
-    color: rgb(192, 192, 192);
-    font-size: 22px;
-    cursor: pointer;
-    display: none;
-}
-#click{
-    display: none;
-}
-
-/* Responsive work start hare */
-
-@media only screen and (max-width:1292px) {
-    .menu-btn{
-        display: block
-    }
-    .menu{
+@media only screen and (max-width:1298px){
+    ul{
         position: fixed;
+        background-color: rgb(48, 46, 46);
         top: 80px;
         left: -100%;
-        background-color: #232f3a;
-        height: 100vh;
-        width: 100%;
         flex-direction: column;
         text-align: center;
-        padding-top: 20px;
-        transition: 1s;
+        width: 100%;
+        height: 100vh;
+        transition: 0.5s;
     }
-    #click:checked ~ .menu-btn i::before{
-        content: "";
+    ul li{
+        margin-top: 80px;
     }
-    #click:checked ~ ul{
+    label{
+        display: block;
+    }
+    input:checked ~ label i::before{
+        content: "\58";
+    }
+    input:checked ~ ul{
         left: 0%;
     }
-    .menu li{
-        margin: 50px 0;
+}
+@media only screen and (max-width:392px){
+    .logo{
+        font-size: 20px;
     }
-    .menu li a{
-        font-size: 22px;
+    ul li a{
+        text-decoration: none;
+        padding: 8px 30px ;
+        font-size: 10px;
+        color: white;
+        font-weight: bold;
     }
-    .menu li a:hover, .menu li a.activbe-home{
-        background:none;
-        color: red;
-    }
-    
 }
