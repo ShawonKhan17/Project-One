@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Montserrat;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: hwb(210 2% 83%);
+    height: 80px;
+    padding: 0 50px 0px 80px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+.logo{
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+}
+input{
+    display: none;
+}
+label{
+    display: none;
+}
+ul{
+    display: flex;
+}
+ul li{
+    list-style-type: none;
+    margin: 0 10px;
+}
+ul li a{
+    text-decoration: none;
+    padding: 15px 50px ;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    transition: 0.5s;
+}
+.menu a:hover , .active-home{
+    background-color: brown;
+    border-radius: 8px;
+}
+/* @media only screen and (max-width:1298px){ */
+    ul{
+        position: fixed;
+        background-color: rgb(13, 13, 18);
+        top: 80px;
+        left: -100%;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        transition: 0.5s;
+    }
+    ul li{
+        margin-top: 80px;
+    }
+    label{
+        display: block;
+        color: white;
+    }
+    input:checked ~ label i::before{
+        content: "\58";
+    }
+    input:checked ~ ul{
+        left: 0%;
+    }
+
+@media only screen and (max-width:392px){
+    .logo{
+        font-size: 20px;
+    }
+    ul li a{
+        text-decoration: none;
+        padding: 8px 30px ;
+        font-size: 10px;
+        color: white;
+        font-weight: bold;
+    }
+}
+
+/* header section code start */
+header{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.477),rgba(0, 0, 0, 0.443)), url(image/python.jpg);
+    height: 91.2vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+/* main frist-section */
+#frist-section{
+    background-color: rgb(47, 53, 100);
+}
+.our-services{
+    text-align: center;
+    padding: 50px 0;
+    color: white;
+    font-size: 40px;
+    word-spacing: px;
+}
+.parent-services{
+    width: 1200px;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 40px 40px;
+    padding-bottom: 100px;
+}
+.single-service{
+    background-color: white;
+    padding: 25px 0 30px 0;
+    text-align: center;
+    border: 3px solid green;
+    box-shadow: 5px 5px 10px gray;
+}
+.single-service i{
+    font-size: 50px;
+}
+.single-service h2{
+    font-size: 40px;
+    margin: 15px 0 10px 0;
+}
+
+/* second section code start */
+.second-secton{
+    background-color: #1d4a68;
+    padding: 50px 0 100px 0;
+    position: relative;
+}
+.smart-area {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+}
+.smart-parent{
+    margin-left: 350px;
+    margin-right: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.girl-img{
+    width: 100%;
+}
+.girl-img img{
+    width: 400px;
+}
+.text-area{
+    color: white;
+}
+.text-area h2{
+    margin: 20px 0;
+    font-size: 30px;
+}
+.text-area a{
+    text-decoration: none;
+    font-size: 22px;
+    background-color: bisque;
+    color: black;
+    padding: 10px 30px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 40px;
+}
+
+/* third section code start */
+.third-section{
+    background: url(image/about-section.jpg) no-repeat ;
+    background-position: center;
+    background-size: cover;
+    padding: 100px 0 100px 0;
+    height: 100%;
+}
+.third-secton-parent{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+}
+.third-section-text-area{
+    color: white;
+    margin: 70px 50px 0 0;
+}
+.third-section-text-area h3{
+    font-size: 28px;
+}
+.third-section-text-area p{
+    margin: 25px 0 25px 0;
+    font-size: 20px;
+}
+.third-section-text-area a{
+    margin-top: 30px;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    background-color: yellow;
+    padding: 15px 15px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+.third-seciton-card-area{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 25px 25px;
+}
+.third-single-card{
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid rgb(23, 253, 23);
+}
+
+.third-single-card h4{
+    font-size: 20px;
+    padding: 10px;
+}
+.third-single-card p{
+    margin: 25px 0 20px 0;
+    font-weight: 500;
+}
+
+/* first seciton responsive */
+@media only screen and (max-width: 688px) {
+    .parent-services{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 15px;
+        width: 100%;
+    }
+    .smart-parent{
+        margin-left: 30px;
+        margin-right: 30px;
+        display: block;
+        text-align: center;
+    }
+    .girl-img img{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .smart-area{
+        font-size: 25px;
+    }
+    /* about secton code start */
+    .third-section{
+        padding: 5px 0 50px 0;
+    }
+    .third-secton-parent{
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+    .third-section-text-area{
+        margin: 10px 35px;
+    }
+    .third-section-text-area a{
+        margin-bottom: 20px;
+    }
+    .third-seciton-card-area{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10;
+        margin: 35px;
+    }
+    
+}
+@media only screen and (min-width: 689px) and (max-width: 1299px) {
+    .parent-services{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        width: 100%;
+    }
+    .smart-parent{
+        margin-left: 100px;
+        margin-right: 100px;
+        display: block;
+        text-align: center;
+        
+    }
+    .girl-img img{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    /* third section code */
+    .third-secton-parent{
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+        .third-section-text-area{
+        margin: 0 35px;
+    }
+    .third-seciton-card-area{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 25px 25px;
+        margin: 0 35px;
+    }
+    .third-section-text-area a{
+        margin-bottom: 30px;
+    }
+}
