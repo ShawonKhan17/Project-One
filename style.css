@@ -229,6 +229,61 @@ header{
     font-weight: 500;
 }
 
+/* forth secton code hare */
+/* fourth section code start */
+.fourth-section{
+    background-color: #2e4053;
+    padding: 125px 0;
+    color: white;
+}
+.advice-parent{
+    display: flex;
+    margin: 0 350px;
+    gap: 45px;
+}
+.advice-img-box img{
+    width: 550px;
+}
+.single-advice p{
+    margin: 20px 0;
+    line-height: 1.5;
+    text-align: justify;
+}
+.single-advice h3{
+    font-size: 25px;
+    border-bottom: 2px solid red;
+    padding-bottom: 20px;
+}
+.single-advice a{
+    text-decoration: none;
+    color: white;
+    background: brown;
+    padding: 15px 15px;
+    border-radius: 15px;
+    margin-top: 5px;
+    display: inline-block;
+    font-weight: 600;
+}
+.single-advice h4{
+    font-size: 25px;
+    margin-top: 15px;
+}
+.fa-facebook,.fa-twitter,.fa-github,.fa-linkedin{
+    font-size: 30px;
+    margin-right: 20px;
+    color: rgb(73, 142, 174);
+    background-color: rgba(103, 148, 174, 0.176);
+    padding: 15px;
+    border-radius: 40% 20%;
+    transition: 0.5s;
+    box-shadow: 2px 2px 20px rgb(37, 154, 190);
+}
+div i:hover{
+    color: rgb(0, 0, 0);
+    background-color: skyblue;
+    cursor: pointer;
+    transform: scale(1.1);
+}
 /* first seciton responsive */
 @media only screen and (max-width: 688px) {
     .parent-services{
@@ -271,7 +326,24 @@ header{
         grid-gap: 10;
         margin: 35px;
     }
-    
+    /* forth section code  */
+    .fourth-section{
+        padding: 60px 0;
+    }
+    .advice-parent{
+        display: block;
+        margin: 0 30px;
+    }
+    .advice-img-box{
+        width: 280px;
+    }
+    .advice-img-box img{
+        width: 100%;
+    }
+    .fa-facebook,.fa-twitter,.fa-github,.fa-linkedin{
+        font-size: 20px;
+        margin: 0 6px 20px 0;
+    }
 }
 @media only screen and (min-width: 689px) and (max-width: 1299px) {
     .parent-services{
@@ -308,5 +380,23 @@ header{
     }
     .third-section-text-area a{
         margin-bottom: 30px;
+    }
+    /* forth section code hare */
+    .fourth-section{
+        padding: 60px 0;
+    }
+    .advice-parent{
+        display: flex;
+        margin: 0 30px;
+    }
+    .advice-img-box{
+        width: 380px;
+        margin: 10px 0 30px;
+    }
+    .advice-img-box img{
+        width: 100%;
+    }
+    .advice-section-icon i{
+        
     }
 }
